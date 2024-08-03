@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar .logo{
+    width: 8%;
+    height: 7vh;
+    border: 1px solid black;
+}
+.navbar .logo img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+.navbar .hom{
+    justify-content: space-between;
+}
+.navbar .hom ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.navbar .hom  ul li{
+    list-style: none;
+    justify-content: space-between;
+    margin: 10px;
+}
+.navbar .hom ul li a{
+    font-weight: bold;
+    font-family: aerial;
+    text-decoration: none;
+    justify-content: space-between;
+    color: burlywood;
+    letter-spacing: 1px;
+}
+.navbar .hom ul li a:hover{
+    border: 2px solid red;
+    color: rgb(106, 219, 96);
+}
+section{
+    width: 100%;
+    height: 40vh;
+}
+section .slider{
+    width: 400%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+section .slider .slider1{
+    width: 25%;
+    height: 100%;
+}
+section .slider .slider1 img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+@keyframes example {
+    0%{
+        left: -400%;
+    }
+    25%{
+        left: -300%;
+    }
+    50%{
+        left: -200%;
+    }
+    75%{
+        left: -100%;
+    }
+    100%{
+        left: 0;
+    }
+}
+@media  screen and (max-width:800px) {
+    .navbar{
+        width: 100%;
+        height: 10vh;
+        background-color: transparent;
+        align-items: center;
+        display: grid;
+        justify-content: space-between;
+        z-index: 0;
+    }
+    .navbar .hom ul{
+        display: grid;
+        justify-content: space-between;
+        z-index: 0;  
+    }
+    .navbar .logo img{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+    section .slider{
+        width: 400%;
+        height: 100%;
+        display: flex;
+        position: absolute;
+        animation-name: example;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        z-index: -1;
+    }
+    
+    section .slider .slider1{
+        width: 25%;
+        height: 100%;
+    }
+    section .slider .slider1 img{
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+    }
+
+}
